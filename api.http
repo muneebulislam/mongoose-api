@@ -1,18 +1,21 @@
-get http://localhost:3000
+get http://localhost:3000/users/specific
 ###
 
-get http://localhost:3000/users
+get http://localhost:3000/users/test_users
+
 ###
-post http://localhost:3000/create_user
+
+post http://localhost:3000/users/create_user
 Content-Type: application/json
 
 {
-   "name": "Tuba",
-   "age": 33
+   "name": "sarah",
+   "age": 34
 }
 
 ###
-post http://localhost:3000/create_user
+
+post http://localhost:3000/users/create_user
 Content-Type: application/json
 
 {
@@ -20,4 +23,9 @@ Content-Type: application/json
    "age": 6
 }
 
+###
 
+get http://localhost:3000/users/getUsers
+###
+
+get http://localhost:3000/users/getOneUser/
